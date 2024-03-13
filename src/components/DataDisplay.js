@@ -7,7 +7,7 @@ function DataDisplay({ queryKey, queryFilter }) {
   const { loading, error, data } = useQuery(query, {
     variables: { queryFilter },
   });
-
+  console.log(data);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 

@@ -10,11 +10,12 @@ export const QUERIES = {
       }
     }
   `,
-  PERMISSIONS_DAO_ID: gql`
-    query ($queryFilter: String!) {
-      permissions(where: { id: $queryFilter }) {
-        dao {
-          subdomain
+  INTROSPECTION: gql`
+    query IntrospectionQuery {
+      __schema {
+        types {
+          name
+          kind
         }
       }
     }
