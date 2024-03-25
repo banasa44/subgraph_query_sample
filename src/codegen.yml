@@ -1,0 +1,5 @@
+generates:
+  ./cartql.json:
+    schema: ../schema.graphql
+    plugins:
+      - introspection
